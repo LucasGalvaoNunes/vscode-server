@@ -12,6 +12,7 @@ RUN apt-get update && apt-get install -y \
     lsb-release \
     sudo \
     unzip \
+    git \
     php-cli php-mbstring php-xml php-curl \
     python3 python3-pip \
     && apt-get clean
@@ -21,6 +22,9 @@ RUN curl -fsSL https://raw.githubusercontent.com/tj/n/master/bin/n | bash -s lts
 
 # Docker CLI
 RUN curl -fsSL https://get.docker.com | sh
+
+# Composer
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 # Adiciona o usuário 'coder' ao grupo docker
 RUN usermod -aG docker coder
