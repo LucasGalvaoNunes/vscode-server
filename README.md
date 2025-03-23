@@ -13,6 +13,7 @@ Custom image for [code-server](https://github.com/coder/code-server) with:
 
 ```bash
 docker run -it --rm \
+  -e PASSWORD="root" \
   -p 8443:8080 \
   -v "$PWD:/home/coder/project" \
   -v /var/run/docker.sock:/var/run/docker.sock \
@@ -32,7 +33,7 @@ docker run -it --rm \
 ## 🔐 Default Credentials
 
 - **User**: `coder`
-- **Password**: None (set via environment variable `PASSWORD` if needed)
+- **Password**: `root` (set via environment variable `PASSWORD` if needed)
 
 ## 🐳 GHCR
 
