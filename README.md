@@ -38,3 +38,4 @@ docker run -it --rm \
 
 Image is hosted at:  
 👉 [ghcr.io/lucasgalvaonunes/vscode-server](https://ghcr.io/lucasgalvaonunes/vscode-server)
+
