@@ -31,9 +31,6 @@ RUN echo "coder ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 USER coder
 WORKDIR /home/coder
 
-# Instalação global de ferramentas comuns (opcional)
-RUN npm install -g typescript eslint prettier
-
 # Expõe porta padrão do code-server
 EXPOSE 8080
 
